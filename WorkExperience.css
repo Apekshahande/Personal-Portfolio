@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .container{
+    transform-style: preserve-3d;
+}
+
+.container .box{
+    position: relative;
+    width: 390px;
+    height: 300px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+} 
+
+.container .box .body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.9s ease;
+} 
+.card{
+    background: #1A2980;
+    background: -webkit-linear-gradient(to right, #26D0CE, #1A2980);  
+    background: linear-gradient(to right, #26D0CE, #1A2980); 
+    
+    color: white;
+}
+
+
+
+
+.container .box .body .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f0c29;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+.container .box:hover .body{
+    transform: rotateY(180deg);
+}
+
+.container .box .body .content div{
+    transform-style: preserve-3d;
+    width: 330px;
+    height: 250px; 
+    margin: 20px; 
+    padding: 25px;  
+    background: #0f0c29;  
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+    transform: translateZ(100px);
+}
+
+.container .box .body .content div h3{
+    letter-spacing: 1px;
+}
+.card-text{
+    font-size: 13px;
+}
